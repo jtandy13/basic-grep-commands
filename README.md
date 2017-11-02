@@ -10,6 +10,8 @@ A collection of commonly used grep commands
 -B<num> include leading text
 -C<num> include trailing and leading text
 -H print the file name with each match
+-l return only file names
+-c returns the file name and the number of hits
 ```
 
 ## Search the current directory for a string pattern
@@ -19,10 +21,10 @@ grep "string to look for" *
 
 ## Recursively search the current directory for a string pattern
 ```bash
-grep -R "string to look for" *
+grep -r "string to look for" *
 ```
 
-## Case insensitive search
+## Return all files that contain the keyword in current directory and sub-directories
 ```bash
-grep -i "StInG To LoOk FoR"
+grep -lr "string to look for" *
 ```
